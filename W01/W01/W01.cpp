@@ -18,6 +18,7 @@
 */
 int main()
 {
+    // outputs 'Hello World!'
     std::cout << "Hello World!\n";
     return 0;
 }
