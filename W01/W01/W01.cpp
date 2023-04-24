@@ -20,7 +20,13 @@ int main()
 {
     // outputs 'Hello World!'
     std::cout << "Hello World!\n";
+    std::cout << (1 / 2) << std::endl;
+    int x = 1;
+    std::cout << (7 + 3 * ++x) << std::endl;
+    for (int count = 1; count < 11; count++)
+        std::cout << count << std::endl;
     return 0;
+
 }
 
 
