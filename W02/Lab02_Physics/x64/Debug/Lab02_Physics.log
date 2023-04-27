@@ -1,0 +1,7 @@
+﻿  Lab02_Physics.cpp
+D:\CSE230\W02\Lab02_Physics\Lab02_Physics.cpp(210,12): warning C4101: 'd1': unreferenced local variable
+D:\CSE230\W02\Lab02_Physics\Lab02_Physics.cpp(209,12): warning C4101: 's': unreferenced local variable
+D:\CSE230\W02\Lab02_Physics\Lab02_Physics.cpp(207,12): warning C4101: 'ddy': unreferenced local variable
+D:\CSE230\W02\Lab02_Physics\Lab02_Physics.cpp(206,12): warning C4101: 'ddx': unreferenced local variable
+D:\CSE230\W02\Lab02_Physics\Lab02_Physics.cpp(211,12): warning C4101: 'd2': unreferenced local variable
+  Lab02_Physics.vcxproj -> D:\CSE230\W02\x64\Debug\Lab02_Physics.exe
