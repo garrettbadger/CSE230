@@ -1,4 +1,1 @@
-﻿  Practice.cpp
-D:\CSE230\W02\Practice\Practice.cpp(203,12): warning C4101: 'ddy': unreferenced local variable
-D:\CSE230\W02\Practice\Practice.cpp(202,12): warning C4101: 'ddx': unreferenced local variable
-  Practice.vcxproj -> D:\CSE230\W02\x64\Debug\Practice.exe
+﻿  Practice.vcxproj -> D:\CSE230\W02\x64\Debug\Practice.exe

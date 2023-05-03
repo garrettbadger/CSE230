@@ -1,14 +1,15 @@
 /*************************************************************
  * 1. Name:
- *      -your name-
+ *      Garrett Badger
  * 2. Assignment Name:
  *      Practice 02: Physics simulator
  * 3. Assignment Description:
  *      Compute how the Apollo lander will move across the screen
  * 4. What was the hardest part? Be as specific as possible.
- *      -a paragraph or two about how the assignment went for you-
+ *     The hardest part was a bug I got stuck on. I basically had everything
+ *     correct but I switched sin and cos on the horizontal and vertical functions.
  * 5. How long did it take for you to complete the assignment?
- *      -total time in hours: reading the assignment, submitting, etc.
+ *      7 hours
  **************************************************************/
 
 #include <iostream>  // for CIN and COUT
