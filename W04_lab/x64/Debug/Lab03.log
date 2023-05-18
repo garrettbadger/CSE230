@@ -1,0 +1,4 @@
+﻿  simulator.cpp
+D:\CSE230\W04_lab\lander.h(61,4): error C2561: 'Lander::input': function must return a value
+D:\CSE230\W04_lab\lander.h(57,15): message : see declaration of 'Lander::input'
+D:\CSE230\W04_lab\game.h(64,3): error C2144: syntax error: 'int' should be preceded by ';'
