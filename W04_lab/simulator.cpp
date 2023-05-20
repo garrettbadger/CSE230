@@ -15,7 +15,7 @@ void callBack(const Interface* pUI, void* p)
 	Game* game = (Game*)p;
 
 	Thrust thrust = game->input(pUI);
-    game->gamePlay(thrust);
+    game->gamePlay(thrust, pUI);
     game->display(thrust, pUI);
 }
 
@@ -41,9 +41,22 @@ int main(int argc, char** argv)
     Interface ui(0, NULL,
         "Open GL Demo",
         ptUpperRight);
+    Star stars[50];
+    int index;
+    for (index = 0;
+        index < 50;
+        index++)
+    {
+
+        unsigned char phase = random(0, 255);
+        Star star(random(0, 400), random(0, 400), phase);
+        stars[index] = star;
+    }
+    
 
     // Initialize the game class
-    Game game(ptUpperRight);
+    Game game(ptUpperRight, stars);
+    
 
     // set everything into action
     ui.run(callBack, &game);

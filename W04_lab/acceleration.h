@@ -13,8 +13,8 @@ class Acceleration
    
 private:
     // private attributes
-    double ddx;
-    double ddy;
+    double ddx = 0.0;
+    double ddy = 0.0;
 
 public:
     //constructors

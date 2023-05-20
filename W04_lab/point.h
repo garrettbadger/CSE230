@@ -9,7 +9,8 @@
 
 
 #pragma once
-
+#include "acceleration.h"
+#include "velocity.h"
 #include <iostream>
 
 /*********************************************
@@ -47,10 +48,10 @@ public:
       y = rhs.y;
       return *this;
    }
-   void add(double accel, double vel, double time) 
+   void add(Acceleration accel, Velocity vel) 
    {
-       this->x = x + vel * time + 0.5 * accel * (pow(time, 2));
-       this->y = y + vel * time + 0.5 * accel * (pow(time, 2));
+       this->x = x + vel.getDX() * 0.1 + 0.5 * accel.getDDX() * (pow(0.1, 2));
+       this->y = y + vel.getDY() * 0.1 + 0.5 * accel.getDDY() * (pow(0.1, 2));
    }
 
 private:

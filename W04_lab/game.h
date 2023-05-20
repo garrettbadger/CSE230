@@ -20,11 +20,19 @@
 class Game 
 {
 public:
-	Game(const Point & ptUpperRight);
+	Game(const Point& ptUpperRight, Star stars[]) :ground(ptUpperRight), lander(ptUpperRight)
+	{ 
+		this->ptUpperRight = ptUpperRight;
+		for (int i = 0; i < 50; i++)
+		{
+		this->stars[i] = stars[i];
+		}; 
+	};
 
 	void reset()
 	{
 		lander.reset();
+		Star stars; 
 		stars.reset(400, 400);
 		ground.reset();
 		
@@ -37,16 +45,17 @@ public:
 		return thrust;
 
 	}
-	void gamePlay(const Thrust thrust)
+	void gamePlay(const Thrust thrust, const Interface * ui)
 	{
 		if (not lander.isFlying())
 		{
 			return;
 		}
 		Acceleration acceleration = lander.input(thrust);
-		lander.coast(acceleration);
+		lander.coast(acceleration, ui);
 		if (ground.hitGround(lander.getPosition(), 20))
 			lander.crash();
+			
 		else if (ground.onPlatform(lander.getPosition(), 20))
 			if (lander.getVelocity().getSpeed() > 4)
 				lander.crash();
@@ -57,20 +66,28 @@ public:
 	}
 	void display(const Thrust thrust, const Interface * ui)
 	{
+
 		ogstream gout;
-		ground.draw(gout);
-		lander.draw(thrust, gout, ui)
-		
 		int index;
-    	for (index = 0;
-        	index < 50;
-        	index++)
-        	stars[index].draw(gout);
+
+		for (index = 0;
+			index < 50;
+			index++)
+		{
+			
+			stars[index].draw(gout);
+		}
+		ground.draw(gout);
+		lander.draw(thrust, gout, ui);
+		
+		
+			
+
 	}
 private:
 	Thrust thrust;
-	Lander lander;
 	Point ptUpperRight;
+	Lander lander;
 	Ground ground;
 	Star stars[50];
 };

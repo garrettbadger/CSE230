@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="glDemo.cpp" />
     <ClCompile Include="ground.cpp" />
     <ClCompile Include="point.cpp" />
     <ClCompile Include="simulator.cpp" />

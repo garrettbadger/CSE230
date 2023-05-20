@@ -13,7 +13,7 @@ class Velocity
    
 private:
     // private attributes
-    double dx = 3.1;
+    double dx = 0.0;
     double dy = 0.0;
     double velocity;
 
@@ -45,11 +45,13 @@ public:
     }
     double getSpeed()
     {
-        return velocity;
+        return std::sqrt(dx * dx + dy * dy);
     }
-    void add(double accel, double time)
+    void add(double ddy, double ddx, double time)
     {
-        this->velocity = std::sqrt(dx * dx + dy * dy) + accel * time;
+        this->dy = dy + ddy * time;
+        this->dx = dx + ddx * time;
+        
        
     }
 
